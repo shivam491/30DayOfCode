@@ -1,0 +1,30 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+	string str,temp="";
+	vector<string> token;
+	getline(cin,str);
+	long int size=str.length();
+	for(long int i=0;i<size;i++)
+	{
+		if((str[i]>='a' && str[i]<='z') || (str[i]>='A' && str[i]<='Z'))
+			temp+=str[i];
+	
+		else
+		{
+			if(temp!="")
+			token.push_back(temp);
+			temp="";
+		}
+	}
+	if(temp!="")
+			token.push_back(temp);
+	
+	cout<<token.size()<<"\n";
+	for(vector<string>::iterator it=token.begin();it!=token.end();it++)
+	{
+		cout<<*it<<"\n";
+	}
+	
+}
