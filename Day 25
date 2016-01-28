@@ -1,0 +1,50 @@
+https://www.hackerrank.com/contests/30-days-of-code/challenges/day-25-running-time
+---------
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+	long long int t,n,i,j,k,l,m,o,p;
+	cin>>t;
+	while(t--)
+	{
+		cin>>n;
+		if(n==2 || n==3){
+		cout<<"Prime\n";
+		continue;}
+		else if(n<2)
+		{
+			cout<<"Not prime\n";
+			continue;
+		}
+		else if(n%2==0 || n%3==0)
+		{
+			
+			cout<<"Not prime\n";
+			continue;
+	
+		
+			
+		}
+		else
+		{
+			j=sqrt(n);
+			p=0;
+		//	cout<<j;
+			for(i=5;i<=j;i++)
+			{
+				if((n%i==0) || (n%(i+2)==0))
+				{
+					p=1;
+					break;
+				}
+			}
+			if(p==1)
+			cout<<"Not prime\n";
+			else
+			cout<<"Prime\n";
+		}
+		
+		
+	}
+}
