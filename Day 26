@@ -1,0 +1,32 @@
+https://www.hackerrank.com/contests/30-days-of-code/challenges/day-26-testing-part-1-plus-implementations
+----------
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+	 int t,i,j,k,l,m1,m,d1,d,y1,y;
+	cin>>d>>m>>y;
+	cin>>d1>>m1>>y1;
+	if(y!=y1)
+	{
+		cout<<"10000\n";
+	}
+	else if(m!=m1)
+	{
+		j=m-m1;
+		k=500*j;
+		k=max(0,k);
+		cout<<k;
+	}
+	else if(d!=d1)
+	{
+		j=d-d1;
+		k=15*j;
+		k=max(0,k);
+		cout<<k;
+	}
+	else 
+	{
+		cout<<"0";
+	}
+}
