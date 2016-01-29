@@ -1,0 +1,34 @@
+https://www.hackerrank.com/contests/30-days-of-code/challenges/day-29-look-at-everything-weve-learned
+---------------
+#include <bits/stdc++.h>
+using namespace std;
+
+
+int main() {
+    long long int t,i,j,k,l,m,n,o,p,g;
+    cin>>t;
+    while(t--)
+        {
+        string s,d;
+        cin>>s;
+        d=s;
+        reverse(s.begin(),s.end());
+        g=0;
+        k=s.size();
+        
+        for(i=1;i<k;i++)
+            {
+            if(abs(s[i]-s[i-1])!=abs(d[i]-d[i-1]))
+                {
+                g=1;
+                break;
+            }
+        }
+        if(g==0)
+            cout<<"Funny\n";
+        else
+            cout<<"Not Funny\n";
+        
+        
+    }
+}
